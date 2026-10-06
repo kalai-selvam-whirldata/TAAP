@@ -1,0 +1,502 @@
+<title>TAAP Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #F6FAF8; --surface: #FFFFFF; --surface-alt: #EEF6F1;
+  --green: #1E7A4A; --green-dark: #123F26;
+  --mint: #DFF0E7; --mint-soft: #F1F8F4;
+  --coral: #EE9C74; --coral-dark: #C96A3B;
+  --navy: #10222B; --gray: #566963;
+  --border: rgba(16, 34, 43, 0.09); --border-strong: rgba(16, 34, 43, 0.16);
+  --shadow-sm: 0 1px 2px rgba(16, 34, 43, 0.05), 0 1px 1px rgba(16, 34, 43, 0.03);
+  --shadow-md: 0 14px 32px -10px rgba(16, 34, 43, 0.14), 0 2px 8px rgba(16, 34, 43, 0.05);
+  --glow-green: 0 14px 30px -8px rgba(30, 122, 74, 0.4);
+  --radius-sm: 12px; --radius-md: 16px; --radius-lg: 22px; --radius-pill: 999px;
+  --font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { overflow-x: hidden; max-width: 100%; }
+body { margin: 0; font-family: var(--font-body); color: var(--navy); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
+
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; margin: 0 0 14px; color: var(--navy); letter-spacing: -0.01em; text-wrap: balance; }
+h1 { font-size: clamp(28px, 4.6vw, 44px); line-height: 1.15; }
+h2 { font-size: clamp(21px, 2.8vw, 26px); line-height: 1.25; }
+h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; }
+p { margin: 0 0 14px; color: var(--gray); }
+a { color: inherit; }
+ul { margin: 0 0 14px; padding-left: 20px; color: var(--gray); }
+li { margin-bottom: 6px; }
+:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 6px; }
+
+.review-banner { background: #FFF7E8; color: #7A5A15; font-family: var(--font-body); font-weight: 600; text-align: center; padding: 10px 16px; font-size: 13px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-body); font-weight: 600; letter-spacing: -0.005em; text-decoration: none; border-radius: var(--radius-pill); padding: 14px 26px; border: none; cursor: pointer; transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, filter 0.18s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%); color: var(--surface); box-shadow: var(--glow-green); }
+.btn-primary::after { content: "\2192"; transition: transform 0.18s ease; display: inline-block; }
+.btn-primary:hover::after { transform: translateX(3px); }
+.btn-small { padding: 10px 18px; font-size: 13.5px; }
+
+.nav { position: sticky; top: 0; background: rgba(246, 250, 248, 0.86); backdrop-filter: blur(10px) saturate(140%); border-bottom: 1px solid var(--border); z-index: 100; }
+.nav-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 16px; }
+.logo { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+.logo-icon { height: 48px; width: 48px; object-fit: contain; display: block; flex-shrink: 0; }
+.logo-word { font-family: var(--font-body); font-weight: 800; font-size: 19px; letter-spacing: -0.01em; color: var(--navy); }
+.nav-cta { display: none; }
+@media (min-width: 760px) { .nav-cta { display: inline-flex; } }
+
+.section { padding: clamp(44px, 7vw, 80px) 20px; }
+.section-inner { max-width: 1080px; margin: 0 auto; }
+
+/* Hero */
+.pp-hero { background: linear-gradient(180deg, var(--mint-soft) 0%, var(--bg) 100%); }
+.pp-label { font-family: var(--font-body); font-weight: 700; color: var(--green); text-transform: uppercase; font-size: 12.5px; letter-spacing: 0.12em; margin-bottom: 14px; }
+.pp-hero h1 { max-width: 16ch; }
+.pp-hero-sub { max-width: 560px; font-size: 16.5px; }
+.pp-trust-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 13.5px; font-weight: 600; color: var(--green-dark); margin: 22px 0 10px; }
+.pp-trust-row span.sep { color: var(--border-strong); font-weight: 400; }
+.pp-asterisk-note { font-size: 12.5px; color: var(--gray); max-width: 560px; }
+
+/* Overview cards */
+.pp-overview-grid { display: grid; gap: 16px; grid-template-columns: 1fr; margin-top: 8px; }
+@media (min-width: 700px) { .pp-overview-grid { grid-template-columns: 1fr 1fr; } }
+.pp-overview-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm); }
+.pp-overview-num { font-family: var(--font-heading); font-size: 13px; color: var(--green); font-weight: 600; margin-bottom: 6px; display: block; }
+.pp-overview-card h3 { font-size: 16.5px; }
+.pp-overview-card p { font-size: 14px; margin-bottom: 0; }
+
+/* Body layout: sticky TOC + content */
+.pp-body-wrap { background: var(--surface); }
+.pp-layout { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: start; }
+@media (min-width: 960px) { .pp-layout { grid-template-columns: 240px 1fr; gap: 56px; } }
+
+.pp-toc-mobile { display: block; margin-bottom: 8px; }
+@media (min-width: 960px) { .pp-toc-mobile { display: none; } }
+.pp-toc-mobile summary { cursor: pointer; font-weight: 700; font-family: var(--font-body); padding: 12px 16px; background: var(--surface-alt); border-radius: var(--radius-md); border: 1px solid var(--border); list-style: none; }
+.pp-toc-mobile summary::-webkit-details-marker { display: none; }
+.pp-toc-mobile ul { list-style: none; margin: 10px 0 0; padding: 6px 4px; }
+.pp-toc-mobile a { display: block; padding: 8px 10px; font-size: 14px; text-decoration: none; color: var(--gray); border-radius: 8px; }
+.pp-toc-mobile a:hover { background: var(--surface-alt); color: var(--navy); }
+
+.pp-toc-desktop { display: none; }
+@media (min-width: 960px) { .pp-toc-desktop { display: block; position: sticky; top: 80px; } }
+.pp-toc-desktop p.toc-heading { font-family: var(--font-body); font-weight: 700; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray); margin-bottom: 12px; }
+.pp-toc-desktop ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
+.pp-toc-desktop a { display: block; font-size: 13.5px; text-decoration: none; color: var(--gray); padding: 7px 10px; border-radius: 8px; border-left: 2px solid transparent; transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease; }
+.pp-toc-desktop a:hover { color: var(--navy); background: var(--surface-alt); border-left-color: var(--green); }
+
+.pp-content section { margin-bottom: 46px; scroll-margin-top: 86px; }
+.pp-content section:last-child { margin-bottom: 0; }
+.pp-content h2 { display: flex; align-items: center; gap: 10px; }
+.pp-content h2 .sec-num { font-family: var(--font-body); font-size: 13px; font-weight: 700; color: var(--green); background: var(--mint); padding: 3px 10px; border-radius: var(--radius-pill); }
+.pp-content p, .pp-content ul { font-size: 14.5px; max-width: 70ch; }
+.pp-sub-heading { font-family: var(--font-body); font-weight: 700; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy); margin: 18px 0 8px; }
+
+.callout { background: var(--mint-soft); border-left: 3px solid var(--green); border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 16px 20px; margin: 16px 0; max-width: 70ch; }
+.callout p { margin-bottom: 0; color: var(--navy); font-size: 14px; }
+.callout strong { color: var(--green-dark); }
+.callout--flag { background: #FFF7E8; border-left-color: #B88A2E; }
+.callout--flag p { color: #7A5A15; }
+.callout--cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+
+.pp-diagram { display: flex; flex-direction: column; align-items: center; gap: 6px; max-width: 320px; margin: 20px auto; }
+.pp-diagram-node { background: var(--surface); border: 1.5px solid var(--border-strong); border-radius: var(--radius-md); padding: 12px 24px; font-weight: 700; font-size: 14px; color: var(--navy); box-shadow: var(--shadow-sm); }
+.pp-diagram-node--center { background: var(--mint); border-color: var(--green); color: var(--green-dark); }
+.pp-diagram-arrow { font-size: 18px; color: var(--green); line-height: 1; }
+
+.footer { background: var(--navy); color: #C9D6D0; padding: 64px 20px 32px; }
+.footer-inner { max-width: 1080px; margin: 0 auto; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+@media (min-width: 900px) { .footer-grid { grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 32px; } }
+.footer-brand .logo { margin-bottom: 18px; }
+.footer-brand .logo-icon { height: 66px; width: 66px; transition: box-shadow 0.25s ease; }
+.footer-brand .logo:hover .logo-icon { box-shadow: 0 0 0 6px rgba(63, 174, 115, 0.18); }
+.footer-brand .logo-word { color: var(--surface); font-size: 23px; }
+.footer-hook { font-family: var(--font-heading); font-weight: 500; font-size: 17px; line-height: 1.35; color: #EFF3F0; max-width: 300px; margin: 0 0 10px; }
+.footer-hook-sub { font-size: 13.5px; color: #8FA79C; margin: 0 0 16px; }
+.footer-thread { width: 100%; max-width: 220px; height: 20px; display: block; margin-bottom: 4px; overflow: visible; }
+.footer-thread path { fill: none; stroke: var(--green); stroke-width: 1.4; stroke-linecap: round; opacity: 0.55; stroke-dasharray: 6 10; animation: footerThreadDrift 9s linear infinite; }
+@keyframes footerThreadDrift { to { stroke-dashoffset: -64; } }
+.footer-col-heading { font-family: var(--font-body); font-weight: 700; font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #8FA79C; margin: 0 0 16px; }
+.footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.footer-col a, .footer-bottom-links a { position: relative; color: #C9D6D0; text-decoration: none; font-size: 14px; display: inline-block; width: fit-content; transition: color 0.22s ease; }
+.footer-col a::after, .footer-bottom-links a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background: #3FAE73; transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
+.footer-col a:hover, .footer-bottom-links a:hover { color: #3FAE73; }
+.footer-col a:hover::after, .footer-bottom-links a:hover::after { transform: scaleX(1); }
+.footer-cols-middle { display: contents; }
+@media (max-width: 899px) and (min-width: 480px) { .footer-cols-middle { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; } }
+.footer-location { font-size: 13px; color: #8FA79C; margin-top: 16px; }
+.footer-disclaimer { font-size: 12px; color: #7C948C; max-width: 640px; margin: 36px 0 0; }
+.footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 18px 0 22px; }
+.footer-bottom { display: flex; flex-direction: column; gap: 10px; font-size: 12.5px; color: #7C948C; }
+@media (min-width: 640px) { .footer-bottom { flex-direction: row; align-items: center; justify-content: space-between; } }
+.footer-bottom-links { display: flex; gap: 18px; }
+</style>
+
+<div class="review-banner">Internal draft — items marked [REVIEW REQUIRED] need factual confirmation from Whirldata/TAAP legal &amp; compliance before this page is published publicly.</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="TAAP home"><img class="logo-icon" src="assets/taap-icon.svg" alt=""><span class="logo-word">TAAP</span></a>
+    <a href="index.html#waitlist" class="btn btn-primary btn-small nav-cta">Join the Waitlist</a>
+  </div>
+</header>
+
+<main>
+  <section class="section pp-hero">
+    <div class="section-inner">
+      <p class="pp-label">Privacy at TAAP</p>
+      <h1>Your conversations are personal. Your data should be too.</h1>
+      <p class="pp-hero-sub">TAAP is designed with privacy and responsible data handling at the centre of the therapist–client experience.</p>
+      <div class="pp-trust-row">
+        <span>Privacy by Design</span><span class="sep">•</span>
+        <span>Secure Data Handling</span><span class="sep">•</span>
+        <span>User Control</span><span class="sep">•</span>
+        <span>HIPAA-Aware Practices*</span>
+      </div>
+      <p class="pp-asterisk-note">*HIPAA applicability depends on how TAAP is used and the relationship between TAAP, therapists, healthcare organizations, and users.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="section-inner">
+      <div class="pp-overview-grid" id="privacy-overview">
+        <div class="pp-overview-card">
+          <span class="pp-overview-num">01</span>
+          <h3>Your data stays yours</h3>
+          <p>You retain control over your personal information, subject to applicable law and your account terms.</p>
+        </div>
+        <div class="pp-overview-card">
+          <span class="pp-overview-num">02</span>
+          <h3>Built for sensitive information</h3>
+          <p>TAAP treats therapy- and health-related information as sensitive, with safeguards to match.</p>
+        </div>
+        <div class="pp-overview-card">
+          <span class="pp-overview-num">03</span>
+          <h3>Purpose-limited use</h3>
+          <p>We collect and process information only for the purposes this policy discloses.</p>
+        </div>
+        <div class="pp-overview-card">
+          <span class="pp-overview-num">04</span>
+          <h3>Transparency</h3>
+          <p>What we collect, why, and how it's handled — this policy makes it clear.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pp-body-wrap">
+    <div class="section-inner">
+
+      <details class="pp-toc-mobile">
+        <summary>Jump to a section</summary>
+        <ul>
+          <li><a href="#privacy-overview">Privacy Overview</a></li>
+          <li><a href="#information-we-collect">Information We Collect</a></li>
+          <li><a href="#how-we-use-information">How We Use Information</a></li>
+          <li><a href="#therapist-client-data">Therapist &amp; Client Data</a></li>
+          <li><a href="#health-information">Health Information</a></li>
+          <li><a href="#hipaa">HIPAA</a></li>
+          <li><a href="#data-sharing">Data Sharing</a></li>
+          <li><a href="#data-security">Data Security</a></li>
+          <li><a href="#data-retention">Data Retention</a></li>
+          <li><a href="#cookies">Cookies</a></li>
+          <li><a href="#privacy-rights">Your Privacy Rights</a></li>
+          <li><a href="#childrens-privacy">Children's Privacy</a></li>
+          <li><a href="#international-users">International Users</a></li>
+          <li><a href="#data-breaches">Data Breaches</a></li>
+          <li><a href="#policy-updates">Policy Updates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </details>
+
+      <div class="pp-layout">
+        <nav class="pp-toc-desktop" aria-label="Privacy policy sections">
+          <p class="toc-heading">On this page</p>
+          <ul>
+            <li><a href="#privacy-overview">Privacy Overview</a></li>
+            <li><a href="#information-we-collect">Information We Collect</a></li>
+            <li><a href="#how-we-use-information">How We Use Information</a></li>
+            <li><a href="#therapist-client-data">Therapist &amp; Client Data</a></li>
+            <li><a href="#health-information">Health Information</a></li>
+            <li><a href="#hipaa">HIPAA</a></li>
+            <li><a href="#data-sharing">Data Sharing</a></li>
+            <li><a href="#data-security">Data Security</a></li>
+            <li><a href="#data-retention">Data Retention</a></li>
+            <li><a href="#cookies">Cookies</a></li>
+            <li><a href="#privacy-rights">Your Privacy Rights</a></li>
+            <li><a href="#childrens-privacy">Children's Privacy</a></li>
+            <li><a href="#international-users">International Users</a></li>
+            <li><a href="#data-breaches">Data Breaches</a></li>
+            <li><a href="#policy-updates">Policy Updates</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="pp-content">
+
+          <section id="information-we-collect">
+            <h2><span class="sec-num">1</span>Information We Collect</h2>
+            <p>What we collect depends on whether you're using TAAP as a therapist or a client, and how you use the platform.</p>
+
+            <p class="pp-sub-heading">Account Information</p>
+            <ul>
+              <li>Name</li>
+              <li>Email address</li>
+              <li>Phone number, if provided</li>
+              <li>Account type (therapist or client)</li>
+              <li>Authentication and account security information</li>
+            </ul>
+
+            <p class="pp-sub-heading">Therapist / Professional Information</p>
+            <ul>
+              <li>Professional profile information</li>
+              <li>Practice information</li>
+              <li>Client invitations you send</li>
+              <li>Activities you assign</li>
+              <li>Appointment-related information you manage</li>
+            </ul>
+
+            <p class="pp-sub-heading">Client Information</p>
+            <p>Depending on how your therapist has set up your account, this may include:</p>
+            <ul>
+              <li>Account and profile information</li>
+              <li>Assigned activities</li>
+              <li>Activity completion status</li>
+              <li>Reflections you choose to record</li>
+              <li>Messages or questions sent through TAAP, where enabled</li>
+              <li>Appointment information</li>
+              <li>Information you voluntarily submit through TAAP</li>
+            </ul>
+
+            <p class="pp-sub-heading">Technical Information</p>
+            <ul>
+              <li>Device information</li>
+              <li>Browser information</li>
+              <li>IP address</li>
+              <li>Login and security logs</li>
+              <li>App interaction information</li>
+              <li>Cookie information (see "Cookies" below)</li>
+            </ul>
+            <!-- [REVIEW REQUIRED: confirm the exact data fields above against current product scope before publishing] -->
+            <div class="callout callout--flag"><p><strong>Review note:</strong> the categories above reflect TAAP's current documented feature set. Engineering/legal should confirm no fields are missing or overstated before this page goes live.</p></div>
+          </section>
+
+          <section id="how-we-use-information">
+            <h2><span class="sec-num">2</span>How We Use Information</h2>
+            <p>We use information to:</p>
+            <ul>
+              <li>Provide TAAP's core functionality</li>
+              <li>Connect therapists and their clients within the platform</li>
+              <li>Deliver assigned activities and track completion</li>
+              <li>Support engagement between sessions</li>
+              <li>Manage appointments</li>
+              <li>Provide notifications and reminders</li>
+              <li>Maintain accounts</li>
+              <li>Provide customer support</li>
+              <li>Support security and fraud prevention</li>
+              <li>Improve product reliability and performance</li>
+              <li>Meet applicable legal obligations</li>
+            </ul>
+            <div class="callout"><p>We do not use therapy-related or health-related information for advertising or marketing purposes. Any product analytics used to improve TAAP are kept separate from the operational use of your therapy-related data.</p></div>
+          </section>
+
+          <section id="therapist-client-data">
+            <h2><span class="sec-num">3</span>Therapist &amp; Client Data</h2>
+            <p>TAAP connects a therapist and client in a shared workspace. Information flows both ways as part of that relationship:</p>
+            <div class="pp-diagram" aria-hidden="true">
+              <div class="pp-diagram-node">Therapist</div>
+              <span class="pp-diagram-arrow">↓</span>
+              <div class="pp-diagram-node pp-diagram-node--center">TAAP</div>
+              <span class="pp-diagram-arrow">↕</span>
+              <div class="pp-diagram-node">Client</div>
+            </div>
+            <p>Therapists and clients share information through TAAP — activities, reflections, messages, appointments — as part of their therapeutic relationship.</p>
+            <div class="callout"><p><strong>TAAP is a technology platform and does not provide therapy, diagnose conditions, prescribe treatment, or replace a licensed healthcare professional.</strong></p></div>
+            <p>Therapists remain responsible for their own professional and legal obligations, including how they use client information on TAAP.</p>
+          </section>
+
+          <section id="health-information">
+            <h2><span class="sec-num">4</span>Health Information</h2>
+            <div class="callout"><p><strong>Health information deserves additional protection.</strong></p></div>
+            <p>TAAP may hold sensitive health- or therapy-related information — activity responses, reflections, shared notes. Where applicable, we handle it separately from ordinary account or marketing data.</p>
+            <p>Whether information counts as Protected Health Information ("PHI") under HIPAA, or an equivalent elsewhere, depends on the circumstances and entities involved — not everything in TAAP is automatically PHI.</p>
+          </section>
+
+          <section id="hipaa">
+            <h2><span class="sec-num">5</span>HIPAA &amp; Protected Health Information</h2>
+            <p>HIPAA applies to certain healthcare providers, health plans, and clearinghouses ("Covered Entities"), and to service providers handling PHI on their behalf ("Business Associates").</p>
+            <p>If TAAP handles PHI on behalf of a Covered Entity, additional HIPAA obligations may apply. Where required and agreed, TAAP may enter into a Business Associate Agreement (BAA) with that entity.</p>
+            <div class="callout callout--flag"><p>HIPAA does not automatically apply to every health or wellness application, or to every piece of information entered into an application.</p></div>
+            <div class="callout callout--cta">
+              <p style="margin:0;">Have questions about using TAAP within your healthcare practice?</p>
+              <a href="#contact" class="btn btn-primary btn-small">Contact Privacy Team</a>
+            </div>
+          </section>
+
+          <section id="data-sharing">
+            <h2><span class="sec-num">6</span>Data Sharing</h2>
+            <p>We may share information with:</p>
+            <ul>
+              <li>The therapist or client counterpart within your own TAAP relationship</li>
+              <li>Service providers who help us operate TAAP</li>
+              <li>Infrastructure and hosting providers</li>
+              <li>Authentication providers</li>
+              <li>Communications providers (for example, to deliver notifications)</li>
+              <li>Professional advisers, such as legal or accounting advisers</li>
+              <li>Legal or regulatory authorities, where required by law</li>
+            </ul>
+            <div class="callout"><p>We do not sell sensitive therapy or health information for targeted advertising.</p></div>
+            <!-- [REVIEW REQUIRED: list actual named subprocessors/vendors once confirmed] -->
+          </section>
+
+          <section id="data-security">
+            <h2><span class="sec-num">7</span>Data Security</h2>
+            <h3>Security is part of the architecture.</h3>
+            <p>We apply safeguards intended to protect information on TAAP, including:</p>
+            <ul>
+              <li>Encryption</li>
+              <li>Access controls</li>
+              <li>Authentication</li>
+              <li>Role-based permissions</li>
+              <li>Monitoring and logging</li>
+              <li>Backup and recovery practices</li>
+              <li>Secure development practices</li>
+              <li>Vendor risk management</li>
+            </ul>
+            <p>No method of electronic transmission or storage can be guaranteed to be completely secure.</p>
+            <!-- [REVIEW REQUIRED: confirm specific encryption standards, audit status, and certifications, if any, before naming them publicly] -->
+          </section>
+
+          <section id="data-retention">
+            <h2><span class="sec-num">8</span>Data Retention</h2>
+            <p>We retain personal information only as long as needed — to provide the service, meet contractual and legal obligations, resolve disputes, or maintain security.</p>
+            <div class="callout callout--flag"><p><strong>[REVIEW REQUIRED:</strong> insert specific retention schedules once confirmed by legal/compliance.]</p></div>
+          </section>
+
+          <section id="cookies">
+            <h2><span class="sec-num">9</span>Cookies</h2>
+            <p>TAAP's website and app may use cookies, generally grouped as:</p>
+            <ul>
+              <li>Essential — needed for the site/app to function</li>
+              <li>Analytics — help us understand how TAAP is used</li>
+              <li>Preferences — remember your settings</li>
+              <li>Marketing — used for promotional purposes, where applicable</li>
+            </ul>
+            <!-- [REVIEW REQUIRED: confirm exactly which of the above categories are actually in use before publishing] -->
+            <a href="#cookies" class="btn btn-small" style="background:var(--surface);color:var(--green);border:1.5px solid var(--border-strong);">Manage Cookie Preferences</a>
+          </section>
+
+          <section id="privacy-rights">
+            <h2><span class="sec-num">10</span>Your Privacy Rights</h2>
+            <p>Depending on your jurisdiction, you may have the right to:</p>
+            <ul>
+              <li>Access your personal information</li>
+              <li>Correct inaccurate information</li>
+              <li>Delete your information, subject to applicable limits</li>
+              <li>Restrict certain processing</li>
+              <li>Object to certain processing</li>
+              <li>Request data portability</li>
+              <li>Withdraw consent, where processing relies on it</li>
+            </ul>
+            <p>Not every right applies in every jurisdiction or situation.</p>
+            <a href="#contact" class="btn btn-primary btn-small">Submit a Privacy Request</a>
+          </section>
+
+          <section id="childrens-privacy">
+            <h2><span class="sec-num">11</span>Children's Privacy</h2>
+            <div class="callout callout--flag"><p><strong>[LEGAL REVIEW REQUIRED:</strong> confirm TAAP's minimum user age, parental/guardian consent requirements, and therapist-mediated use by minors, before this section is published.]</p></div>
+          </section>
+
+          <section id="international-users">
+            <h2><span class="sec-num">12</span>International Users</h2>
+            <p>TAAP may serve users in different countries. Your privacy rights and applicable laws can vary by location.</p>
+            <!-- [REVIEW REQUIRED: do not claim compliance with GDPR, HIPAA, India's DPDP Act, or any other framework unless implementation has been verified] -->
+          </section>
+
+          <section id="data-breaches">
+            <h2><span class="sec-num">13</span>Data Breach / Incident Response</h2>
+            <p>TAAP maintains processes to identify and respond to security incidents. Where legally required, we'll notify affected users and authorities as the law requires.</p>
+            <!-- [REVIEW REQUIRED: do not commit to a specific notification timeframe unless legally/contractually verified] -->
+          </section>
+
+          <section id="policy-updates">
+            <h2><span class="sec-num">14</span>Policy Updates</h2>
+            <p>Last updated: [INSERT PUBLICATION DATE]</p>
+            <p>This policy may change as TAAP and applicable law evolve. We'll communicate material changes where required.</p>
+          </section>
+
+          <section id="contact">
+            <h2><span class="sec-num">15</span>Questions about your privacy?</h2>
+            <p>Whirldata<br>TAAP Privacy Team</p>
+            <p>Privacy email: [INSERT VERIFIED PRIVACY EMAIL]<br>Company/address: [INSERT VERIFIED LEGAL ENTITY AND ADDRESS]</p>
+            <a href="#contact" class="btn btn-primary btn-small">Contact Privacy Team</a>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html#top" class="logo" aria-label="TAAP home"><img class="logo-icon" src="assets/taap-icon.svg" alt=""><span class="logo-word">TAAP</span></a>
+        <p class="footer-hook">Therapy happens in a session.<br>Progress happens between them.</p>
+        <svg class="footer-thread" viewBox="0 0 220 20" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M2,14 C40,4 70,20 110,10 C150,0 180,16 218,8"/>
+        </svg>
+        <p class="footer-hook-sub">TAAP keeps both connected.</p>
+      </div>
+
+      <div class="footer-cols-middle">
+        <div class="footer-col">
+          <p class="footer-col-heading">Product</p>
+          <ul>
+            <li><a href="index.html#how-it-works">How it works</a></li>
+            <li><a href="index.html#pillars">Features</a></li>
+            <li><a href="#privacy-overview">Privacy</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-heading">Company</p>
+          <ul>
+            <li><a href="index.html#waitlist">Request access</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About TAAP</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-heading">Preferences</p>
+        <ul>
+          <li><a href="#cookies">Cookie preferences</a></li>
+        </ul>
+        <p class="footer-location">TAAP · Made in India 🇮🇳</p>
+      </div>
+    </div>
+
+    <p class="footer-disclaimer">TAAP does not diagnose, treat, or replace your therapist. For emergencies, contact an appropriate crisis service.</p>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <span>© 2026 Whirldata. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#top">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
